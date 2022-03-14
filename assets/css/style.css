@@ -1,24 +1,96 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
  
   }
 
+
+/* ______________________________________________________colors */
   .colors {
-    min-height: 80vh;
+    min-height: 50vh;
     color: rgb(212, 212, 212);
   }
 
   .color {
-    height: 80vh;
- display: flex;
-   flex: 1;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: space-evenly; 
+    min-height: 50vh;
     position: relative;
-    overflow: hidden;
+    text-align: center;
+  
   }
  
 
+  .color h2 {
+   margin-top: 70px;
+  }
 
+  .controls  {
+    margin-top: 80px;
+   }
+
+   .sliders {
+    background: pink;
+    padding: 1rem;
+    width: 100%;
+border: solid 2px black;
+    pointer-events: none;
+   color: black;
+margin-top: 30px;
+
+  }
+
+
+  /* ______________________________________________________panel */
+
+  .panel  {
+margin-top: 20px;
+    text-align: center;
+
+   }
+
+  .panel2  {
+   display: inline-block;
+   justify-content: space-evenly;
+
+
+  }
+
+
+  .panel button {
+    font-size: 1rem;
+    margin: 0.7rem;
+    padding: 0.7rem 1.8rem;
+    background: blue;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 0.7rem;
+  }
+
+  .panel p {
+    font-size: 1rem;
+  }
+
+  .adjust,
+.lock {
+  font-size: 1.8rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 2rem 0rem;
+}
+
+/* ______________________________________________________slider */
+
+input[type="range"] {
+  margin: 0.7rem 0rem;
+  width: 100%;
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+
+
+/* ______________________________________________________media */
+
+  @media only screen and (max-width: 600px) {
+
+  } 
