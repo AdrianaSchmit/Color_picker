@@ -82,11 +82,17 @@ margin-top: 20px;
 /* ______________________________________________________slider */
 
 input[type="range"] {
-  margin: 0.7rem 0rem;
+  margin: 1rem 0rem;
   width: 100%;
-  border-radius: 0.7rem;
   cursor: pointer;
 }
+
+
+
+
+
+
+
 
 
 /* ______________________________________________________media */

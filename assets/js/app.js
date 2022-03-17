@@ -4,7 +4,14 @@
 var colorDivs = document.querySelectorAll(".color");
 var generateBtn = document.querySelector(".generate");
 var lockButton = document.querySelectorAll(".lock");
+
+
+
 let initialColors;
+
+
+
+
 
 
 // event listeners
@@ -17,6 +24,8 @@ lockButton.forEach((button, index) => {
     toggleLockButton(index);
   });
 }); 
+
+
 
 
 //functions______________________________
@@ -75,8 +84,8 @@ function randomColors() {
 
 
 function toggleLockButton(index) {
-  const div = lockButton[index].parentElement.parentElement;
-  const icon = lockButton[index].firstChild;
+  var div = lockButton[index].parentElement.parentElement;
+  var icon = lockButton[index].firstChild;
   icon.classList.toggle("fa-lock-open");
   icon.classList.toggle("fa-lock");
   div.classList.toggle("locked");
@@ -84,4 +93,51 @@ function toggleLockButton(index) {
 
 
 
+
+
+// implemente save to palette 
+
+
+
+
+
+var submitSave = document.querySelector(".submit-save");
+var saveInput = document.querySelector(".panel input");
+var currentHexes = document.querySelectorAll(".color h2");
+
+let savedPalettes = [];
+
+
+
+submitSave.addEventListener("click", savePalette);
+
+function savePalette(e) {
+  var name = saveInput.value;
+  var colors = [];
+  currentHexes.forEach(hex => {
+    colors.push(hex.innerText);
+  });
+
+
+  let paletteNr = savedPalettes.length;  
+  var paletteObj = { name, colors, nr: paletteNr };
+  savedPalettes.push(paletteObj);
+  console.log(savedPalettes);
+}
+ 
+
+ 
+
+
   randomColors();
+
+
+
+ 
+
+
+
+
+
+
+
