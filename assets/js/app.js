@@ -99,8 +99,6 @@ function toggleLockButton(index) {
 
 
 
-
-
 var submitSave = document.querySelector(".submit-save");
 var saveInput = document.querySelector(".panel input");
 var currentHexes = document.querySelectorAll(".color h2");
@@ -122,9 +120,25 @@ function savePalette(e) {
   let paletteNr = savedPalettes.length;  
   var paletteObj = { name, colors, nr: paletteNr };
   savedPalettes.push(paletteObj);
-  console.log(savedPalettes);
+    //Save to localStorage
+    savetoLocal(paletteObj);
+    saveInput.value = "";
+
+}
+
+function savetoLocal(paletteObj) {
+  let localPalettes;
+  if (localStorage.getItem("palettes") === null) {
+    localPalettes = [];
+  } else {
+    localPalettes = JSON.parse(localStorage.getItem("palettes"));
+  }
+  localPalettes.push(paletteObj);
+  localStorage.setItem("palettes", JSON.stringify(localPalettes));
+  console.log(localPalettes);
 }
  
+
 
  
 
