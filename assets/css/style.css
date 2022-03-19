@@ -89,10 +89,25 @@ input[type="range"] {
 
 
 
+.my-palette {
+  display: inline-block;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  overflow-y: scroll;
+  max-height: 50vh;
+  border-bottom: solid 1px;
+}
 
+ .small-preview {
+  display: flex;
+  flex: 1;
+}
 
-
-
+.small-preview div {
+  height: 5rem;
+  flex: 1;
+}
 
 
 /* ______________________________________________________media */
