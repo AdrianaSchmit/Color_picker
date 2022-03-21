@@ -122,9 +122,7 @@ input[type="range"] {
   color: white;
 } */
 
-.modal-backdrop{
- position: absolute;
-}
+
 /* ______________________________________________________media */
 
   @media only screen and (max-width: 600px) {

@@ -148,7 +148,7 @@ function savePalette(e) {
   var paletteBtn = document.createElement("button");
 
   paletteBtn.classList.add("pick-palette-btn");
-paletteBtn.setAttribute("data-bs-dismiss", "modal"); 
+  paletteBtn.setAttribute("data-bs-dismiss", "modal"); 
   paletteBtn.classList.add(paletteObj.nr);
   paletteBtn.innerText = "Select";
 
@@ -162,6 +162,7 @@ paletteBtn.setAttribute("data-bs-dismiss", "modal");
       colorDivs[index].style.backgroundColor = color;
       var text = colorDivs[index].children[0];
      checkTextContrast(color, text);
+     updateTextUI(index) 
     
     });
 
@@ -183,11 +184,20 @@ paletteBtn.setAttribute("data-bs-dismiss", "modal");
 }
 
 
-/* colorDivs.forEach((div, index) => {
+
+
+function updateTextUI(index) {
+  var activeDiv = colorDivs[index];
+  var color = chroma(activeDiv.style.backgroundColor);
+  var textHex = activeDiv.querySelector("h2");
+  textHex.innerText = color.hex();
+}
+
+colorDivs.forEach((div, index) => {
   div.addEventListener("change", () => {
     updateTextUI(index);
   });
-}); */
+});
 
 
 function savetoLocal(paletteObj) {
