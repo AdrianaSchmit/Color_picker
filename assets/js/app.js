@@ -32,6 +32,7 @@ lockButton.forEach((button, index) => {
   
 
 
+
 function createcolor() {
     var hexColor = chroma.random();
     return hexColor;
@@ -94,7 +95,6 @@ function toggleLockButton(index) {
 
 
 
-
 // implemente save to palette 
 
 
@@ -111,6 +111,9 @@ let savedPalettes = [];
 
 
 submitSave.addEventListener("click", savePalette);
+
+
+
 
 
 function savePalette(e) {
@@ -140,13 +143,14 @@ function savePalette(e) {
     smallDiv.style.backgroundColor = smallColor;
     preview.appendChild(smallDiv);
   });
-var paletteBtn = document.createElement("button");
+
+
+  var paletteBtn = document.createElement("button");
 
   paletteBtn.classList.add("pick-palette-btn");
+paletteBtn.setAttribute("data-bs-dismiss", "modal"); 
   paletteBtn.classList.add(paletteObj.nr);
   paletteBtn.innerText = "Select";
-
-
 
   
   //adding event to the btn
@@ -157,10 +161,11 @@ var paletteBtn = document.createElement("button");
       initialColors.push(color);
       colorDivs[index].style.backgroundColor = color;
       var text = colorDivs[index].children[0];
+     checkTextContrast(color, text);
+    
     });
 
   });
- 
 
 
 
@@ -172,20 +177,17 @@ var paletteBtn = document.createElement("button");
     palette.appendChild(preview);
     palette.appendChild(paletteBtn);
     libraryContainer.children[0].appendChild(palette);
- 
-   /*  var element = document.getElementsById("palletes")[0];
-    element.appendChild(palette); */
+
  
    
 }
 
 
-function closeLibrary() {
-  var popup = libraryContainer.children[0];
-  libraryContainer.classList.remove("active");
-  popup.classList.remove("active");
-}
-
+/* colorDivs.forEach((div, index) => {
+  div.addEventListener("change", () => {
+    updateTextUI(index);
+  });
+}); */
 
 
 function savetoLocal(paletteObj) {

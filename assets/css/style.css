@@ -59,7 +59,11 @@ margin-top: 20px;
     font-size: 1rem;
     margin: 0.7rem;
     padding: 0.7rem 1.8rem;
-    background: blue;
+  background: blue; 
+
+
+
+
     border: none;
     color: white;
     cursor: pointer;
@@ -109,7 +113,18 @@ input[type="range"] {
   flex: 1;
 }
 
+/* .pick-palette-btn {
+  height: 5rem;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  background: red;
+  color: white;
+} */
 
+.modal-backdrop{
+ position: absolute;
+}
 /* ______________________________________________________media */
 
   @media only screen and (max-width: 600px) {
