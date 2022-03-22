@@ -3,12 +3,12 @@
 ## Color Picker
 ---
 
-[View the live project here.]( ) 
+[View the live project here.](https://adrianaschmit.github.io/Color_picker/) 
 
 This is the second milestone project for Code Institute. Color Picker is a color pallete generator website, which can be saved to a library.
 
 
-![MockUp]( )
+![MockUp](assets/css/images/mockup.colorpicker.png )
 
 
 
@@ -125,16 +125,16 @@ The element button must not appear as a descendant of the a element. Not fixed f
 ## Deployment
 ---
 
-1. Log in to GitHub and locate the [GitHub Repository](site in here)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/AdrianaSchmit/Color_picker)
 2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu
 3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
 4. Under "Source", click the dropdown called "None" and select "Master Branch".
 5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](site in here ))  in the "GitHub Pages" section.
+6. Scroll back down through the page to locate the now published site [link](https://adrianaschmit.github.io/Color_picker/ )  in the "GitHub Pages" section.
 
 #### Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository](site in here).
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/AdrianaSchmit/Color_picker).
 2. Under the repository name, by the left side of the green Gitpod button click in Code.
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 4. Open Git Bash
