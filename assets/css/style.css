@@ -1,80 +1,54 @@
-/* * {
-    margin: 0;
-    padding: 0;
- 
-  }
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=EB+Garamond&family=Yeseva+One&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+}
 
-/* ______________________________________________________colors */
-  .colors {
-    min-height: 50vh;
-    color: rgb(212, 212, 212);
-  }
+#brand {
+  color: aliceblue;
+  letter-spacing: 2px;
+  font-family: "Amatic+SC:wght@700", sans-serif;
+}
 
-  .color {
-    min-height: 50vh;
-    position: relative;
-    text-align: center;
-  
-  }
- 
+.color {
+  min-height: 70vh;
+  padding-top: 30px;
+}
 
-  .color h2 {
-   margin-top: 70px;
-  }
+.color h2 {
+  margin-top: 20%;
+  text-align: center;
+}
 
-  .controls  {
-    margin-top: 80px;
-   }
+.controls {
+  margin-top: 70%;
+  text-align: center;
+}
 
-   .sliders {
-    background: pink;
-    padding: 1rem;
-    width: 100%;
-border: solid 2px black;
-    pointer-events: none;
-   color: black;
-margin-top: 30px;
+/* ______________________________________________________panel */
 
-  }
+.panel {
 
+  text-align: center;
+}
 
-  /* ______________________________________________________panel */
+.panel button {
+  font-size: 1rem;
+  margin: 0.7rem;
+  padding: 0.7rem 1.8rem;
+  background: blue;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 0.7rem;
+}
 
-  .panel  {
-margin-top: 20px;
-    text-align: center;
+.panel p {
+  font-size: 1rem;
+}
 
-   }
-
-  .panel2  {
-   display: inline-block;
-   justify-content: space-evenly;
-
-
-  }
-
-
-  .panel button {
-    font-size: 1rem;
-    margin: 0.7rem;
-    padding: 0.7rem 1.8rem;
-  background: blue; 
-
-
-
-
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 0.7rem;
-  }
-
-  .panel p {
-    font-size: 1rem;
-  }
-
-  .adjust,
+.adjust,
 .lock {
   font-size: 1.8rem;
   border: none;
@@ -83,15 +57,11 @@ margin-top: 20px;
   margin: 2rem 0rem;
 }
 
-/* ______________________________________________________slider */
-
 input[type="range"] {
   margin: 1rem 0rem;
   width: 100%;
   cursor: pointer;
 }
-
-
 
 .my-palette {
   display: inline-block;
@@ -103,7 +73,7 @@ input[type="range"] {
   border-bottom: solid 1px;
 }
 
- .small-preview {
+.small-preview {
   display: flex;
   flex: 1;
 }
@@ -113,18 +83,17 @@ input[type="range"] {
   flex: 1;
 }
 
-/* .pick-palette-btn {
-  height: 5rem;
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  background: red;
-  color: white;
-} */
-
 
 /* ______________________________________________________media */
 
-  @media only screen and (max-width: 600px) {
+ @media only screen and (max-width: 400px) {
+  .color {
+    min-height: 20vh;
+  }
+}
 
-  } 
+@media only screen and (min-width: 401px) and (max-width: 765px) {
+  .color {
+    min-height: 40vh;
+  }
+} 
