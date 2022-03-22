@@ -11,22 +11,29 @@ This is the second milestone project for Code Institute. Color Picker is a color
 ![MockUp]( )
 
 
-### wireframe
-
-![MockUp]( assets/css/images/Colorpicker.png)
-
 
 ## Features
 ---
 
-#### Existing Features
+### Existing Features
 
-- The site contains one homepage where a random pallete color is generated.
--  Different colors are created by clicking in the button Refresh under the block of colors.
-- The name of the hex color is shown in the middle of the color div.
+- Homepage
+    - The site contains one homepage where a random pallete color is generated.
+
+- Refresh button
+    - when on click it generate the different random colors on the divs.
+
+- Save buuton
+    - By clicking on it, it saves the pallete to a library, with a chosen name.
+
+- Library Button  
+    - When clicked shows alls the saved palletes, with the possible to choose one of them to show on the background.
+
+- The name of the hex color is shown in the middle of the color div with constrat to the background color.
+
 - A button of a lock icon in the middle of the div allow the user to keep that color and stop it pushing other when click to refresh. The same button can be opened to continue pushing colors when click refresh button.
-- Possibility of saving the pallete to a library, with a chosen name to it by clicking in the button save.
-- A library button, when clicked shows alls the saved palletes.
+
+
 
 
 #### Features Left to Implement
@@ -35,6 +42,13 @@ This is the second milestone project for Code Institute. Color Picker is a color
 - Have a user page with login and the palletes created saved to the database for this specific user.
 - Have one page showing examples of palletes created by users.
 - instead of ganerate random colors, have a color igual similar to adobe color.
+- implement a vast amount of comment explaining in the details the code with js.doc
+- Fix the bugs found.
+
+
+### wireframe
+
+![Wireframe]( assets/css/images/Colorpicker.png)
 
 ## Technologies Used
 
@@ -69,24 +83,44 @@ This is the second milestone project for Code Institute. Color Picker is a color
 ## Testing
 ---
 
-The website was manually tested for responsiveness.
+Manual tests were performed.
+ - On click to refreseh button it correctly push new colors to the divs backgroung.
+ - The proper hex name of color show in the div.
+ - The lock button on the div, on click, close the color correctly to not change by clickinh on refresing.
+ - Hex name and lock button have colors contrasting to the background color for a better user experience.
+ - Button save correctly saves the pallete with the chosen name to the library.
+ - The library button correctly opens with all the palletes saved with their respective names.
+ - Inside the library , clicking on select pallete, it correctly closes and show on the background the pallete chosen.
+ - the hex name is updated correctly according to the color, when chosing a new pallete from the library.
+ - the website is responsive.
 
 ### Validator Testing
 
-HTML  - To implemet
+HTML  
 - [W3C Markup Validator](https://validator.w3.org/nu/) 
-No errors were returned when passing through the official W3C validator
+Error reported on unfixed bugs.
 
 CSS - to implement
 No errors were found when passing through the official (Jigsaw) validator
 - [W3C CSS Validator  ](https://jigsaw.w3.org/css-validator/#validate_by_input) 
 
-Javascript - To implement
+Javascript 
+- [Jshint](https://jshint.com/) 
+Error reported on unfixed bugs.
 
-    jshint 
+
 
 ### Unfixed Bugs
-You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+
+- User can save without giving a name to pallete or using the save name. Not fixed for being short on time.
+
+- From W3C Markup Validator
+The element button must not appear as a descendant of the a element. Not fixed for being short of time.
+
+- From jshint
+    - 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
+    One of the ways to try to fix that was using  jshint esversion: 6 as described in the lick below with no sucess. Erroir message was , 	The 'esversion' option cannot be set after any executable code. https://stackoverflow.com/questions/42866159/arrow-function-syntax-is-only-available-in-es6-use-esversion-6
+
 
 ## Deployment
 ---
@@ -121,7 +155,7 @@ You will need to mention unfixed bugs and why they were not fixed. This section 
 
 - The Code to push the colors was made with classes from Chrma.js documentation.
 
-- Aditional help to save to storage
+- Aditional help to save to storage between others that were not able to be listed here.
     - https://www.codegrepper.com/code-examples/javascript/json+local+storage
     - https://www.w3schools.com/js/tryit.asp?filename=tryjson_store
 
@@ -130,5 +164,7 @@ You will need to mention unfixed bugs and why they were not fixed. This section 
 
 
 #### Acknowledgements
+---
+Thanks to tutors, my mentor and student care team for the support.
 
 
